@@ -20,7 +20,6 @@ server.on('connection', socket => {
       sockets[socket.id] = socket;
       return;
     }
-    console.log(' ${socket.name}:', data);
 
     Object.entries(sockets).forEach(([key, cSocket]) => {
       if (socket.id == key) {
